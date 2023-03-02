@@ -1,0 +1,193 @@
+
+
+1 Create a c# console application which can get the linear summation of an array with 10 elements.Ask the user to enter the values 
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp34
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[]numbers=new int[10];
+
+            Console.WriteLine("Enter the values  ");
+            for(int i=0;i<numbers.Length;i++)
+            {
+                Console.WriteLine(numbers[i]);
+                numbers[i] = Convert.ToInt32(numbers[i]);
+            }
+            int sum = 0;
+            for(int i=0;i< numbers.Length;i++)
+            {
+                sum += numbers[i];  
+
+            }
+            Console.WriteLine("The linear summention of the array is" + sum);
+
+
+
+2 write a c# program that can find minimum and maximum from a given single dimensional array.
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp35
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter the number of elements in the array: ");
+            int n = int.Parse(Console.ReadLine());
+            int[] arr = new int[n];
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write($"Enter element {i}: ");
+                arr[i] = int.Parse(Console.ReadLine());
+            }
+
+            int min = arr[0], max = arr[0];
+            for (int i = 1; i < n; i++)
+            {
+                if (arr[i] < min)
+                {
+                    min = arr[i];
+                }
+                if (arr[i] > max)
+                {
+                    max = arr[i];
+                }
+            }
+
+            Console.WriteLine($"Minimum value in array: {min}");
+            Console.WriteLine($"Maximum value in array: {max}");
+        }
+    }
+}
+
+
+
+
+
+3.Create a c# program that can sort a single dimensional array according to accending and dicending order
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp35
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, };
+            Array.Sort(array);
+            Console.WriteLine("Acending order  ");
+            foreach (int i in array) Console.WriteLine(i);
+
+            Array.Reverse(array);
+            Console.WriteLine("dicending order ");
+            foreach (int i in array) Console.WriteLine(i);
+            Console.ReadKey();
+
+        }
+    }
+}
+
+
+
+4.Create a c# program that can find minimum and maximum value from a 2D array.
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp35
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[,] array = { { 1, 2, 3, 4, 5, 6, 7, 8, }, { 9, 10, 11, 12, 13, 14, 15,16, } };
+            int min = array[0,0], max = array[1,0]; 
+            for(int i = 0; i < array.Length; i++)
+            {
+            for(int j=0;j<array.Length; j++)
+                {
+                    if (array[i,j]<min)
+                    {
+                        min = array[i,j];   
+                    }
+                    if (array[i,j]>max)
+                    {
+                        max = array[i,j];   
+                    }
+                }
+                Console.WriteLine("max value is" + max);
+                Console.WriteLine("min value is" + min);
+                Console.ReadKey();
+                
+
+             
+            }
+
+        }
+    }
+}
+
+
+
+
+5.Create a c#  program that can multiply two 2*2
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp36
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] numbers = new int[2];
+
+            Console.WriteLine("Enter the number ");
+            numbers[0]=int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter the number ");
+            numbers[1]=int.Parse(Console.ReadLine());
+
+            int result = numbers[0] * numbers[1];
+            Console.WriteLine(result);
+
+        }
+    }
+          
+}
+
+            
+
+            
